@@ -1,0 +1,100 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 3rem 2rem; /* Added room to breathe */
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: 2.75rem;
+  /* Luxury multi-tone metallic earth gradient */
+  background: linear-gradient(135deg, var(--primary) 0%, #6E5D4F 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  margin-top: 0.75rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  gap: 2.5rem;
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+/* Button Styling - Rebuilt for premium tactile responsiveness */
+button {
+  border: none;
+  background: var(--surface);
+  color: var(--text-primary);
+  border-radius: 12px; /* Slightly rounder for a friendlier luxury feel */
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  letter-spacing: -0.01em;
+}
+
+button:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-warm); /* Soft contrasting text color */
+}
+
+button.primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  /* Replaced the purple glow with a warm, sophisticated shadow glow */
+  box-shadow: 0 8px 20px rgba(44, 40, 33, 0.15);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}

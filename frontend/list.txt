@@ -1,0 +1,10 @@
+componenets
+eslint.config.js
+index.html
+list.txt
+node_modules
+package-lock.json
+package.json
+readme.md
+src
+vite.config.js

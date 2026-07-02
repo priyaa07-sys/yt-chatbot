@@ -1,0 +1,85 @@
+:root {
+  /* Premium Warm Minimalist Palette */
+  --bg-warm: #FAF7F0;          /* Soft, editorial off-white */
+  --surface: #F4EFE6;          /* Smooth cream surface */
+  --surface-hover: #EAE2D2;    /* Deep, rich cream for hover states */
+  --primary: #2C2821;          /* Deep espresso black for primary elements */
+  --primary-hover: #413B31;
+  --text-primary: #1C1915;     /* Near-black with warm undertones */
+  --text-secondary: #706653;   /* Muted earth gray-brown */
+  --text-placeholder: #A89E8C;
+  --border-color: rgba(44, 40, 33, 0.08); /* Soft, organic borders */
+  
+  /* Status Colors (Softened to match the vibe) */
+  --error: #C24141;
+  --success: #3F7A5C;
+
+  /* Sophisticated Soft Shadow System */
+  --shadow-sm: 0 2px 8px rgba(44, 40, 33, 0.04);
+  --shadow-md: 0 12px 32px rgba(44, 40, 33, 0.06);
+  --shadow-lg: 0 20px 48px rgba(44, 40, 33, 0.1);
+  
+  /* Smooth Easing */
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  /* Switched to a cleaner editorial font stack */
+  font-family: 'Latenza Script', 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-warm);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glass Panel - Enhanced for a liquid-smooth look */
+.glass-panel {
+  background: rgba(244, 239, 230, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+}
+
+/* Animations - Made gentler and more organic */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.8; transform: scale(0.98); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Elegant Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--text-placeholder);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover { 
+  background: var(--text-secondary); 
+}

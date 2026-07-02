@@ -1,0 +1,28 @@
+[yt-chatbot]
+name = "backend"
+version = "0.1.0"
+description = "YouTube Transcript RAG Chatbot"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dotenv>=1.0.0",
+    "langchain-core>=1.2.7",
+    "langchain-google-genai>=4.2.0",
+    "langchain-text-splitters>=0.3.0",
+    "sqlite-vec>=0.1.6",
+    "pydantic>=2.0",
+    "langgraph>=0.2.0",
+    "langchain>=1.2.10",
+    "pytube>=15.0.0",
+    "google-generativeai>=0.8.6",
+    "fastapi>=0.135.1",
+    "uvicorn>=0.41.0",
+    "youtube-transcript-api>=0.6.0",
+    "langchain-ollama>=0.1.0",
+]
+[tool.setuptools.packages.find]
+include = ["backend*"]
+namespaces = false
+
+[tool.setuptools]
+py-modules = ["main", "database", "embedding", "llm_engine", "pipeline", "yt_extract"]

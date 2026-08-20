@@ -57,7 +57,7 @@ async def process_video(request: ProcessVideoRequest):
         return {
             "video_id":     result.video_id,
             "title":        result.title,
-            "author":       result.author,
+            #"author":       result.author,
             "segment_count": result.segment_count,
             "status":       result.status,
         }
@@ -79,7 +79,6 @@ async def ask_video(request: AskRequest):
         result = ask_question(request.question, video_id=request.video_id)
         return {"answer": result.answer}
     except Exception as e:
-        # Log the FULL traceback — this is what makes silent 500s debuggable
         logger.error("Error in /api/ask:\n%s", traceback.format_exc())
         raise HTTPException(status_code=500, detail=f"Error answering question: {str(e)}")
 
